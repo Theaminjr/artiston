@@ -56,3 +56,11 @@ class Profile(models.Model):
 class Address(models.Model):
     detail = models.TextField()
     user = models.ForeignKey(User,on_delete = models.CASCADE)
+
+
+class Language(models.Model):
+    name = models.CharField(max_length = 20)
+
+
+    def __str__(self) -> str:
+        return self.name
